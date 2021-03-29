@@ -5,12 +5,16 @@
 
 <script>
 
+p {
+  font-size: 40px;
+};
+
 const anchors = document.querySelectorAll('a');
 
 console.debug('Before attaching event handlers');
 
 // Loop over every anchor.
-for (const anchor of anchors) {  
+for (const anchor of anchors) {
   // Add a click event listener to the anchor.
   anchor.addEventListener('click', function (event) {
     // WHEN THE ANCHOR'S CLICKED, check the href to see if it's a link to Google.
@@ -27,10 +31,10 @@ for (const anchor of anchors) {
 console.debug('After attaching event handlers');
 
 function mouseOverFunction(){
-  console.log("HI!");
+  alert("HI!");
 };
 function mouseOverFunction2(){
-  console.log("Bye!");
+  alert("Bye!");
 };
 
 document.getElementById("mouseOver").onmouseover = function() {mouseOverFunction()};
